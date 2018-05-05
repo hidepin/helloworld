@@ -7,6 +7,7 @@
     <form th:object="${echoForm}" th:action="@{/echo/hello}" method="post">
         <label for="name">Input Your Name:</label>
         <input th:field="*{name}" />
+        <span th:errors="*{name}" style="color:red"></span>
         <input type="submit" />
     </form>
 </body>
